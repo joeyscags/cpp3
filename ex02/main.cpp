@@ -6,7 +6,7 @@
 /*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:17:11 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/01/07 17:30:10 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/01/07 18:17:39 by joeyscags        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,16 @@ int main() {
 	frag.highFivesGuys();
 	frag.takeDamage(40);
 	frag.beRepaired(20);
+
+	std::cout << "\n=== Testing all robot types ===" << std::endl;
+	clap.attack("Target");
+	scav.attack("Target");
+	scav.guardGate();
+
+	std::cout << "\n=== Testing FragTrap edge cases ===" << std::endl;
+	frag.takeDamage(120);
+	frag.attack("Nobody");
+	frag.highFivesGuys();
 
 	std::cout << "\n=== Destroying robots ===" << std::endl;
 	return 0;
