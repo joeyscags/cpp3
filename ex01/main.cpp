@@ -6,11 +6,12 @@
 /*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:17:11 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/01/07 14:17:12 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/01/07 14:31:08 by joeyscags        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 
 int main() {
@@ -29,6 +30,13 @@ int main() {
 	std::cout << "\n=== Testing repair ===" << std::endl;
 	robot2.beRepaired(4);
 	robot1.beRepaired(2);
+
+	std::cout << "\n=== Creating ScavTrap ===" << std::endl;
+	ScavTrap scav("Scavvy");
+
+	std::cout << "\n=== Testing ScavTrap attack ===" << std::endl;
+	scav.attack("Target");
+	scav.attack("Enemy");
 
 	std::cout << "\n=== Testing edge cases ===" << std::endl;
 	robot2.takeDamage(20);
