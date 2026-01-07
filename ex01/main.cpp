@@ -6,7 +6,7 @@
 /*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:17:11 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/01/07 14:31:08 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/01/07 14:37:38 by joeyscags        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,15 @@ int main() {
 	std::cout << "\n=== Testing ScavTrap attack ===" << std::endl;
 	scav.attack("Target");
 	scav.attack("Enemy");
+
+	std::cout << "\n=== Testing ScavTrap special ability ===" << std::endl;
+	scav.guardGate();
+
+	std::cout << "\n=== Testing ScavTrap damage and repair ===" << std::endl;
+	scav.takeDamage(30);
+	scav.beRepaired(20);
+	scav.takeDamage(150);
+	scav.attack("Nobody");
 
 	std::cout << "\n=== Testing edge cases ===" << std::endl;
 	robot2.takeDamage(20);
