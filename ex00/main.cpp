@@ -1,8 +1,19 @@
 #include "ClapTrap.hpp"
+#include <iostream>
 
 int main() {
+	std::cout << "=== Creating ClapTraps ===" << std::endl;
 	ClapTrap robot1("R2D2");
 	ClapTrap robot2("C3PO");
 
+	std::cout << "\n=== Testing attacks ===" << std::endl;
+	robot1.attack("C3PO");
+	robot1.attack("Enemy");
+
+	std::cout << "\n=== Testing damage ===" << std::endl;
+	robot2.takeDamage(5);
+	robot2.takeDamage(3);
+
+	std::cout << "\n=== Destroying ClapTraps ===" << std::endl;
 	return 0;
 }
