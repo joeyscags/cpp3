@@ -6,7 +6,7 @@
 /*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:35:05 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/01/07 15:17:35 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/01/07 17:30:08 by joeyscags        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ FragTrap::~FragTrap() {
 }
 
 void FragTrap::highFivesGuys(void) {
-	
+	std::cout << "FragTrap " << _name << " requests a positive high five! ✋" << std::endl;
 }

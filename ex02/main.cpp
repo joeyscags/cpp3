@@ -6,7 +6,7 @@
 /*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:17:11 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/01/07 15:10:55 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/01/07 17:30:10 by joeyscags        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ int main() {
 
 	std::cout << "\n=== Creating FragTrap ===" << std::endl;
 	FragTrap frag("Fraggy");
+
+	std::cout << "\n=== Testing FragTrap abilities ===" << std::endl;
+	frag.attack("Enemy");
+	frag.highFivesGuys();
+	frag.takeDamage(40);
+	frag.beRepaired(20);
 
 	std::cout << "\n=== Destroying robots ===" << std::endl;
 	return 0;
