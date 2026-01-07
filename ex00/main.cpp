@@ -14,6 +14,15 @@ int main() {
 	robot2.takeDamage(5);
 	robot2.takeDamage(3);
 
+	std::cout << "\n=== Testing repair ===" << std::endl;
+	robot2.beRepaired(4);
+	robot1.beRepaired(2);
+
+	std::cout << "\n=== Testing edge cases ===" << std::endl;
+	robot2.takeDamage(20);
+	robot2.attack("Enemy");
+	robot2.beRepaired(5);
+
 	std::cout << "\n=== Destroying ClapTraps ===" << std::endl;
 	return 0;
 }

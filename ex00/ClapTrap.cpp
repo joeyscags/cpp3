@@ -37,5 +37,15 @@ void ClapTrap::takeDamage(unsigned int amount) {
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-	
+	if (_energyPoints == 0) {
+		std::cout << "ClapTrap " << _name << " has no energy to repair!" << std::endl;
+		return;
+	}
+	if (_hitPoints == 0) {
+		std::cout << "ClapTrap " << _name << " is dead and cannot repair!" << std::endl;
+		return;
+	}
+	_energyPoints--;
+	_hitPoints += amount;
+	std::cout << "ClapTrap " << _name << " repairs itself for " << amount << " hit points! (" << _hitPoints << " HP total)" << std::endl;
 }
