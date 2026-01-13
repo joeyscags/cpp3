@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: jcupp <jcupp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:16:44 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/01/07 14:16:45 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/01/13 17:27:48 by jcupp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ private:
 
 public:
 	ClapTrap(std::string name);
+	ClapTrap(const ClapTrap& other);
+	ClapTrap& operator=(const ClapTrap& other);
 	~ClapTrap();
 
 	void attack(const std::string& target);

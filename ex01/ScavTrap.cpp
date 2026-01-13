@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: jcupp <jcupp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:17:18 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/01/07 14:37:41 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/01/13 17:27:48 by jcupp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,18 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	_energyPoints = 50;
 	_attackDamage = 20;
 	std::cout << "ScavTrap " << _name << " is constructed!" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) {
+	std::cout << "ScavTrap " << _name << " is copied!" << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
+	std::cout << "ScavTrap assignment operator called" << std::endl;
+	if (this != &other) {
+		ClapTrap::operator=(other);
+	}
+	return *this;
 }
 
 ScavTrap::~ScavTrap() {
